@@ -1,0 +1,222 @@
+.hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: min(100svh, 700px);
+  overflow: hidden;
+  background-color: #17342c;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgb(6 28 25 / 77%) 0%,
+      rgb(9 31 26 / 51%) 32%,
+      rgb(9 29 24 / 9%) 59%,
+      rgb(6 26 23 / 25%) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgb(5 24 22 / 38%) 0%,
+      transparent 29%,
+      transparent 77%,
+      rgb(5 24 22 / 13%) 100%
+    ),
+    var(--hero-image);
+  background-position:
+    center,
+    center,
+    60% 44%;
+  background-size: cover;
+  color: #f7f4ec;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  width: min(48%, 540px);
+  margin: 38px 0 0 5.35vw;
+}
+
+.hero-eyebrow {
+  margin: 0 0 20px;
+  color: rgb(246 245 233 / 80%);
+  /* font-size: 9px; */
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.hero-copy h1 {
+  margin: 0 0 14px;
+  color: #f8f5ed;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(38px, 5vw, 70px);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 0.98;
+}
+
+.hero-description {
+  margin: 0;
+  color: rgb(255 255 255 / 91%);
+  /* font-size: 14px; */
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  /* padding: 0 22px; */
+  padding: 12px 22px;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  color: #fff;
+  /* font-size: 10px; */
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  min-width: 170px;
+  background: #087d7a;
+}
+
+.button-primary:hover {
+  background: #07928d;
+}
+
+.button-primary span {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.button-secondary {
+  min-width: 150px;
+  border-color: rgb(245 244 233 / 75%);
+  background: rgb(17 38 32 / 17%);
+}
+
+.button-secondary:hover {
+  border-color: #fff;
+  background: rgb(255 255 255 / 12%);
+}
+
+.hero-mantra {
+  position: absolute;
+  top: 42%;
+  right: 5.4vw;
+  margin: 0;
+  color: #eee8d9;
+  font-family: "Segoe Print", "Bradley Hand", cursive;
+  font-size: clamp(18px, 2vw, 25px);
+  font-style: italic;
+  line-height: 1.18;
+  transform: rotate(-8deg);
+}
+
+.hero-mantra span {
+  display: block;
+  width: 76px;
+  height: 9px;
+  margin: 8px 0 0 4px;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  transform: rotate(-4deg);
+}
+
+@media (max-width: 760px) {
+  .hero-section {
+    min-height: max(690px, 100svh);
+    align-items: flex-end;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgb(6 27 24 / 35%) 0%,
+        rgb(6 27 24 / 6%) 32%,
+        rgb(5 25 22 / 84%) 72%,
+        rgb(5 25 22 / 95%) 100%
+      ),
+      var(--hero-image);
+    background-position:
+      center,
+      60% top;
+  }
+
+  .hero-copy {
+    width: auto;
+    margin: 0 24px 42px;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 14px;
+    font-size: 8px;
+    letter-spacing: 1.8px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(38px, 10vw, 50px);
+  }
+
+  .hero-description {
+    max-width: 390px;
+    font-size: 13px;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .hero-actions {
+    gap: 10px;
+    margin-top: 19px;
+  }
+
+  .button {
+    min-height: 40px;
+    padding-inline: 17px;
+    font-size: 9px;
+  }
+
+  .button-primary,
+  .button-secondary {
+    min-width: 0;
+  }
+
+  .hero-mantra {
+    top: 26%;
+    right: 7%;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-copy {
+    margin-inline: 18px;
+  }
+
+  .button {
+    padding-inline: 13px;
+  }
+}
